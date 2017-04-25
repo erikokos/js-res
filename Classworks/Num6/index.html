@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src='plotly-latest.min.js'></script>
+	<title>CW6</title>
+</head>
+<body>
+	<div id='placeholder' style = 'height: 600px; width: 600px; margin: auto;'></div>
+	<script>
+		var line1 = {
+			x:[10, 20, 30, 40],
+			y:[10, 20, 30, 40],
+			type:'scatter'
+		};
+		var line2 = {
+			x:[10, 20, 30, 40],
+			y:[15, 25, 35, 45],
+			type:'scatter'
+		};
+		var data = [line1, line2];
+		Plotly.newPlot('placeholder', data);
+	</script>
+</body>
+</html>

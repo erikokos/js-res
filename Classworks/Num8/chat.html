@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CHAT</title>
+</head>
+<body>
+	<div id="container">
+		<img src="#">
+		<input id='message' type="textarea" name="yourMessage">
+		<button id='send' onclick='sendMessage()'>SEND</button>
+	</div>
+	<div id="chatlist">
+		<ul>
+			<!--chatlist-->
+		</ul>
+	</div>
+	<script>
+		function sendMessage()
+		{
+			var message = document.getElementById('message').value;
+			var newLi = document.createElement('li');
+			newLi.innerHTML = message;
+			var ul = document.getElementsByTagName('ul')[0];
+			ul.appendChild(newLi);
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" type="text/css" href="LeafLetJS/leaflet.css">
+<script src='LeafLetJS/leaflet.js'></script>
+<style>
+	#mapId {height: 400px;}
+</style>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="mapId"></div>
+	<button id = 'mapButton'>My rest zone</button>
+	<script>
+		var map = L.map('mapId').setView([59.926755, 30.337784], 13);
+
+		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+		    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+		}).addTo(map);
+
+		L.marker([59.926755, 30.337784]).addTo(map)
+		    .bindPopup("I'm here!!!!")
+		    .openPopup();
+
+		mapButton.onClick = function(){
+			L.marker([59.927208, 30.339591]).addTo(map)
+				.bindPopup('Coffe')
+				.openPopup();
+		}
+	</script>
+</body>
+</html>

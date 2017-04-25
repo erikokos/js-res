@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body * 
+		{
+			margin: 10px;
+			border: 1px solid black
+		}
+	</style>
+</head>
+<body>
+<button id='button_sample' onclick="alert('Меня нажали')">Кнопка</button>
+	<script>
+		function output_alert()
+		{
+			alert('Еще одна обработка нажатия');
+			button_sample.removeEventListener('click', output_alert, false);
+		}
+
+		function output_alert_2()
+		{
+			alert('Еще одна обработка нажатия 1');
+			button_sample.removeEventListener('click', output_alert_2, false);
+		}
+
+		button_sample.addEventListener('click', output_alert, false);
+		button_sample.addEventListener('click', output_alert_2, false);
+	</script>
+</body>
+</html>
